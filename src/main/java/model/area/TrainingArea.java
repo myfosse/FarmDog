@@ -11,6 +11,7 @@ import java.util.Set;
 @Data
 @Builder
 @NoArgsConstructor
+@AllArgsConstructor
 public class TrainingArea<T extends Animal> {
     private int square;
     private int amountOfObstacles;
