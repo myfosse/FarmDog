@@ -1,5 +1,6 @@
 package model.area;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,6 +12,7 @@ import java.util.Set;
 @Data
 @Builder
 @NoArgsConstructor
+@AllArgsConstructor
 public class TrainingArea<T extends Animal> {
     private int square;
     private int amountOfObstacles;

@@ -1,9 +1,6 @@
 package model.animal;
 
-import lombok.Builder;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import model.diet.EDogDiet;
 import model.work.DoOwnWork;
 import model.work.EDogWorkType;
@@ -18,7 +15,7 @@ public class Dog extends Animal implements Feeding<EDogDiet>, DoOwnWork {
     private EDogWorkType dogWorkType;
     private boolean isTrained;
 
-    @Builder(builderMethodName = "DogBuilder")
+    @Builder(builderMethodName = "DogBuilder", access = AccessLevel.PUBLIC)
     public Dog(int weight, int length, int width, int height, String mainColor, int yearsOld,
                boolean isFed, boolean isHealthy,
                boolean isTrained) {
@@ -61,6 +58,7 @@ public class Dog extends Animal implements Feeding<EDogDiet>, DoOwnWork {
         } else {
             System.out.println("Diet is not suitable");
         }
+        setFed(true);
     }
 
     @Override
